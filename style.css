@@ -1,22 +1,25 @@
-body{
+body {
     /* font-family: 'Oxanium', cursive; */
-font-family: 'Electrolize', sans-serif; 
+    font-family: 'Electrolize', sans-serif;
 }
-.title{
+
+.title {
     font-size: 5em;
 }
-.center{
+
+.center {
     text-align: center;
     margin: auto;
 }
-.trailerContainer{
-padding:10px;
+
+.trailerContainer {
+    background-color: black;
 }
 
-.topBlock{
+.topBlock {
     background-color: black;
     width: 100%;
-    height:20%;
+    height: 20%;
     z-index: 2;
     position: absolute;
     color: white;
@@ -24,32 +27,61 @@ padding:10px;
     font-size: 3em;
 }
 
-.bottomBlock{
-    bottom:0px;
+.bottomBlock {
+    bottom: 0px;
     background-color: black;
     width: 100%;
-    height:25%;
+    height: 25%;
     z-index: 2;
     position: absolute;
 }
 
-.showTime{
+.showTime {
     font-size: 2.5em;
     text-align: center;
     margin: auto;
 }
 
-.flashText{
-    animation:blinkingText 1.2s infinite;
-}
-@keyframes blinkingText{
-    0%{     color: #000;    }
-    49%{    color: red; }
-    60%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: #000;    }
+.flashText {
+    animation: blinkingText 1.2s infinite;
 }
 
-.width{
-    width:100%;
+@keyframes blinkingText {
+    0% {
+        color: #000;
+    }
+    49% {
+        color: red;
+    }
+    60% {
+        color: transparent;
+    }
+    99% {
+        color: transparent;
+    }
+    100% {
+        color: #000;
+    }
 }
+
+.width {
+    width: 100%;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe, .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.red{background-color: red;}
+.blue{background-color: blue;}
