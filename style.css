@@ -4,7 +4,7 @@ body {
 }
 
 .title {
-    font-size: 5em;
+    font-size: 4em;
 }
 
 .center {
@@ -24,7 +24,7 @@ body {
     position: absolute;
     color: white;
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .bottomBlock {
