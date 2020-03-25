@@ -14,6 +14,7 @@ body {
 
 .trailerContainer {
     background-color: black;
+    margin-top: 5px;
 }
 
 .topBlock {
@@ -85,3 +86,7 @@ body {
 }
 .red{background-color: red;}
 .blue{background-color: blue;}
+
+.voteContainer{
+    height: 500px;
+}
