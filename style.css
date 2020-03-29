@@ -90,3 +90,10 @@ body {
 .voteContainer{
     height: 600px;
 }
+
+.filmContainer{
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+}
