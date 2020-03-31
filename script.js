@@ -14,7 +14,7 @@ var x = setInterval(function(){
 
 	//when countdown is over
 	if(distance <= 0){
-		$('.showTime').html(`<div>ENGAGE FULL SCREEN IMMEDIATELY</div`) ;
+		//$('.showTime').html(`<div>ENGAGE FULL SCREEN IMMEDIATELY</div`) ;
 		$('.movie').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/B70CDj_y3ik?&autoplay=1&start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
 		clearInterval(x);
 		console.log("out of time");
