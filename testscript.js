@@ -12,7 +12,7 @@ $.ajax({
     currentTime = data.datetime
     console.log(data.datetime)
     console.log("current time: ",currentTime);
-    var countDownTime = new Date("Apr 04, 2020 21:00:00").getTime();
+    var countDownTime = new Date("Apr 05, 2020 01:00:00").getTime();
     var currentdateNorm = new Date(currentTime).getTime();
     console.log("countDownTime : ", countDownTime);
     console.log("currentdateNorm : ", currentdateNorm)
