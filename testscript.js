@@ -6,13 +6,13 @@ let countCheck2 = false;
 $('.playIn').hide()
 
 $.ajax({
-    url: "http://worldtimeapi.org/api/timezone/America/Thunder_Bay",
+    url: "https://worldtimeapi.org/api/timezone/America/Thunder_Bay",
     method: "GET"
 }).then(function(data){
     currentTime = data.datetime
     console.log(data.datetime)
     console.log("current time: ",currentTime);
-    var countDownTime = new Date("Apr 04, 2020 16:32:00").getTime();
+    var countDownTime = new Date("Apr 04, 2020 16:37:00").getTime();
     var currentdateNorm = new Date(currentTime).getTime();
     console.log("countDownTime : ", countDownTime);
     console.log("currentdateNorm : ", currentdateNorm)
