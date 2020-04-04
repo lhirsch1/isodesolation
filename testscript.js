@@ -12,7 +12,7 @@ $.ajax({
     currentTime = data.datetime
     console.log(data.datetime)
     console.log("current time: ",currentTime);
-    var countDownTime = new Date("Apr 05, 2020 01:00:00").getTime();
+    var countDownTime = new Date("Apr 04, 2020 21:00:00").getTime();
     var currentdateNorm = new Date(currentTime).getTime();
     console.log("countDownTime : ", countDownTime);
     console.log("currentdateNorm : ", currentdateNorm)
@@ -24,7 +24,7 @@ $.ajax({
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-        $('.timer').text(`${minutes} MINUTES ${seconds} SECONDS UNTIL FILM BEGINS`) 
+        $('.timer').text(`${hours} HOURS ${minutes} MINUTES ${seconds} SECONDS UNTIL FILM BEGINS`) 
         console.log(distance);
         $('.playIn').text(`PRESS PLAY IN ${seconds}`) 
         //when countdown is over
