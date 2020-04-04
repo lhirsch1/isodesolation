@@ -12,7 +12,7 @@ $.ajax({
     currentTime = data.datetime
     console.log(data.datetime)
     console.log("current time: ",currentTime);
-    var countDownTime = new Date("Apr 04, 2020 16:37:00").getTime();
+    var countDownTime = new Date("Apr 04, 2020 16:41:00").getTime();
     var currentdateNorm = new Date(currentTime).getTime();
     console.log("countDownTime : ", countDownTime);
     console.log("currentdateNorm : ", currentdateNorm)
@@ -49,7 +49,7 @@ $.ajax({
             
         }
         if (distance <= 1000){
-            $('.playIn').text(`PRESS PLAY`)
+            $('.playIn').text(`PRESS PLAY NOW`)
             clearInterval(x);
             console.log("distance :",distance)
         }
