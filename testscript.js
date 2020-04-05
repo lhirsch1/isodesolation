@@ -9,22 +9,29 @@ $.ajax({
     url: "https://worldtimeapi.org/api/timezone/America/Thunder_Bay",
     method: "GET"
 }).then(function(data){
-    currentTime = data.datetime
-    console.log(data.datetime)
-    console.log("current time: ",currentTime);
-    var countDownTime = new Date("Apr 04, 2020 21:00:00").getTime();
-    var currentdateNorm = new Date(currentTime).getTime();
+    
+    //console.log(data.datetime)
+    //console.log("current time: ",currentTime);
+    var countDownTime = 1586047200000;
+    currentTime = (data.datetime)
+    console.log("current time: ",currentTime)
     console.log("countDownTime : ", countDownTime);
-    console.log("currentdateNorm : ", currentdateNorm)
+    var currentdateNorm = new Date(currentTime).getTime();
+    var distance = (countDownTime - currentdateNorm) ;
+    console.log(distance)
+    //console.log("currentdateNorm : ", currentdateNorm)
     var x = setInterval(function(){
-        var now = new Date().getTime();
-        var distance = (countDownTime - now) ;
+        distance = (distance - 1000);
+        
+        
+        //var now = new Date().getTime();
+        
         
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-        $('.timer').text(`${hours} HOURS ${minutes} MINUTES ${seconds} SECONDS UNTIL FILM BEGINS`) 
+        $('.timer').text(`${hours} HOUR ${minutes} MINUTES ${seconds} SECONDS UNTIL FILM BEGINS`) 
         console.log(distance);
         $('.playIn').text(`PRESS PLAY IN ${seconds}`) 
         //when countdown is over
