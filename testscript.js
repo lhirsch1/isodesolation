@@ -8,6 +8,7 @@ let countCheck2 = false;
 $('.playIn').hide()
 
 $.ajax({
+    
     url: "https://worldtimeapi.org/api/timezone/Etc/GMT",
     method: "GET"
 }).then(function(data){
