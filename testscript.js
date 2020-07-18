@@ -8,13 +8,13 @@ let countCheck2 = false;
 $('.playIn').hide()
 
 $.ajax({
-    url: "https://worldtimeapi.org/api/timezone/America/Thunder_Bay",
+    url: "http://worldtimeapi.org/api/timezone/Etc/GMT",
     method: "GET"
 }).then(function(data){
     
     console.log('data ',data.datetime)
     //console.log("current time: ",currentTime);
-    var countDownTime = 1595114580000;
+    var countDownTime = 1595115060000;
     currentTime = (data.datetime)
     console.log("current time: ",currentTime)
     console.log("countDownTime : ", countDownTime);
