@@ -1,5 +1,7 @@
 
 let currentTime = ''
+var currentdateNorm;
+var distance;
 let countCheck1 = false;
 let countCheck2 = false;
 
@@ -10,16 +12,20 @@ $.ajax({
     method: "GET"
 }).then(function(data){
     
-    //console.log(data.datetime)
+    console.log('data ',data.datetime)
     //console.log("current time: ",currentTime);
-    var countDownTime = 1586047200000;
+    var countDownTime = 1595114520000;
     currentTime = (data.datetime)
     console.log("current time: ",currentTime)
     console.log("countDownTime : ", countDownTime);
     var currentdateNorm = new Date(currentTime).getTime();
     var distance = (countDownTime - currentdateNorm) ;
+   
     console.log(distance)
-    //console.log("currentdateNorm : ", currentdateNorm)
+    countDown(distance);
+})
+
+function countDown(distance){
     var x = setInterval(function(){
         distance = (distance - 1000);
         
@@ -30,6 +36,7 @@ $.ajax({
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
     
         $('.timer').text(`${hours} HOUR ${minutes} MINUTES ${seconds} SECONDS UNTIL FILM BEGINS`) 
         console.log(distance);
@@ -57,19 +64,24 @@ $.ajax({
         }
         if (distance <= 1000){
             $('.playIn').text(`PRESS PLAY NOW`)
-            clearInterval(x);
-            console.log("distance :",distance)
+            $('.timer').hide();
+            // clearInterval(x);
+            console.log("old timer ", x)
+            var upDist = distance *-1
+            var catchHours = Math.floor((upDist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var catchMinutes = Math.floor((upDist % (1000 * 60 * 60)) / (1000 * 60));
+            var catchSeconds = Math.floor((upDist % (1000 * 60)) / 1000);
+            catchHours > 9 ? (catchHours = `${catchHours}`) : (catchHours =`0${catchHours}` )
+            catchMinutes > 9 ? (catchMinutes = `${catchMinutes}`) : (catchMinutes =`0${catchMinutes}` )
+            catchSeconds > 9 ? (catchSeconds = `${catchSeconds}`) : (catchSeconds =`0${catchSeconds}` )
+
+    
+        $('.catchUp').text(`${catchHours}:${catchMinutes}:${catchSeconds} CATCH UP TIME STAMP`) 
+
+            // upCount();
         }
         
     
     },1000);
-})
 
-// function timingFunction(){
-//     setInterval(function(){
-//         console.log(hi);
-//     })
-// }
-
-
-
+}
