@@ -14,7 +14,7 @@ $.ajax({
     
     console.log('data ',data.datetime)
     //console.log("current time: ",currentTime);
-    var countDownTime = 1595115060000;
+    var countDownTime = 1595115540000;
     currentTime = (data.datetime)
     console.log("current time: ",currentTime)
     console.log("countDownTime : ", countDownTime);
