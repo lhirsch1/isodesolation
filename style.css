@@ -37,8 +37,8 @@ body {
     position: absolute;
 }
 
-.showTime, .headLineText {
-    font-size: 2.5em;
+.showTime {
+    font-size: 2em;
     text-align: center;
     margin: auto;
 }
