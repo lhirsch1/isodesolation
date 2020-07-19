@@ -15,7 +15,7 @@ $.ajax({
     
     //console.log('data ',data.datetime)
     //console.log("current time: ",currentTime);
-    var countDownTime = 1595116080000;
+    var countDownTime = 1595124000000;
     currentTime = (data.datetime)
     // console.log("current time: ",currentTime)
     // console.log("countDownTime : ", countDownTime);
@@ -43,7 +43,8 @@ function countDown(distance){
         $('.playIn').text(`PRESS PLAY IN ${seconds}`) 
         //when countdown is over
         if(distance <= 20000 && !countCheck1){
-            $('.timer').hide()
+            $('.headLineText').hide();
+            $('.timer').hide();
             $('.playIn').show();
             countCheck1 = true;
             //$('.showTime').html(`<div>ENGAGE FULL SCREEN IMMEDIATELY</div`) ;
@@ -66,6 +67,10 @@ function countDown(distance){
             catchHours > 9 ? (catchHours = `${catchHours}`) : (catchHours =`0${catchHours}` )
             catchMinutes > 9 ? (catchMinutes = `${catchMinutes}`) : (catchMinutes =`0${catchMinutes}` )
             catchSeconds > 9 ? (catchSeconds = `${catchSeconds}`) : (catchSeconds =`0${catchSeconds}` )
+
+            if(catchSeconds > 10){
+                $('.playIn').hide()
+            }
 
     
         $('.catchUp').text(`${catchHours}:${catchMinutes}:${catchSeconds} CATCH UP TIME STAMP`) 
