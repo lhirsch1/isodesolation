@@ -6,6 +6,7 @@ let countCheck1 = false;
 let countCheck2 = false;
 
 $('.playIn').hide()
+location.reload(true);
 
 $.ajax({
 
