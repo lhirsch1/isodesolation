@@ -16,7 +16,7 @@ $.ajax({
     
     //console.log('data ',data.datetime)
     //console.log("current time: ",currentTime);
-    var countDownTime = 1595124000000;
+    var countDownTime = 1595129460000;
     currentTime = (data.datetime)
     // console.log("current time: ",currentTime)
     // console.log("countDownTime : ", countDownTime);
@@ -52,7 +52,7 @@ function countDown(distance){
             var playIn = document.querySelector('.playIn');
             playIn.style.display = "block"
             
-            $('.movie').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/EZ1jsyswhr0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+            $('.movie').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/uBXdJLSP6_8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
 
             
         }

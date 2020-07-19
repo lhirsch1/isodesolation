@@ -6,7 +6,7 @@ let countCheck1 = false;
 let countCheck2 = false;
 
 $('.playIn').hide()
-location.reload(true);
+
 
 $.ajax({
 
@@ -52,7 +52,7 @@ function countDown(distance){
             var playIn = document.querySelector('.playIn');
             playIn.style.display = "block"
             
-            $('.movie').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/Xb5DPV-iC6k?start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+            $('.movie').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/EZ1jsyswhr0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
 
             
         }
